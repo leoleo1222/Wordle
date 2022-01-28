@@ -1,11 +1,7 @@
-import jdk.nashorn.internal.ir.FunctionCall;
-
 import java.io.*;
 import java.util.*;
 public class main {
     static String uncontain = "";
-    static char[][] contain = new char [5][24]  ;
-    static int idxcontain = 0;
     public static void main(String[] arg){
         System.out.println("Wordle Start:");
         int i = 0;
@@ -68,19 +64,6 @@ public class main {
 
     }
 
-    static boolean checkcontain(String data, char[] contain){
-        boolean flag = true;
-        data = data.toUpperCase();
-        for(int i = 0; contain[i] != '\0';i++){
-            char c = contain[i];
-            String C = Character.toString(c);
-            if(!data.contains(C)){
-                flag = false;
-                break;
-            }
-        }
-        return flag;
-    }
 
     private static void print(char[] arr){
         for(char word : arr){
@@ -97,12 +80,6 @@ public class main {
             System.out.println("Character");
             char word = sc.nextLine().charAt(0);
             arr[pos] = Character.toUpperCase(word);
-            System.out.println("Contain charactor Position:");
-            pos = sc.nextInt();
-            System.out.println("Contain charactor");
-            char input = sc.next().charAt(0);
-            contain[pos][idxcontain++] =  Character.toUpperCase(input);
-            sc.nextLine();
             System.out.println("Not contained word");
             String ncontain = sc.nextLine();
             uncontain += ncontain;
