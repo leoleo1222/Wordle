@@ -1,2 +1,2 @@
 # Wordle
-beat wordle
+Aim to solve the wordle puzzle
